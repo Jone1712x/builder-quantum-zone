@@ -7,7 +7,7 @@ export default function About() {
           <div className="text-center md:col-span-1">
             <img
               src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
-              alt="CEO Али Рахманов"
+              alt="Портрет руководителя"
               className="mx-auto h-44 w-44 rounded-full object-cover border border-white/20 shadow-[0_8px_30px_rgba(59,130,246,0.4)]"
               loading="lazy"
             />
