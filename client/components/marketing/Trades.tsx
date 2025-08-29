@@ -8,22 +8,32 @@ export default function Trades() {
         <div className="mt-12 grid gap-6 md:grid-cols-2 max-w-4xl mx-auto text-left">
           <div className="rounded-2xl bg-slate-800/40 border border-white/10 p-6">
             <p className="text-xl md:text-2xl">
-              <span className="text-blue-400 font-bold">BTC</span>: Покупка на Bybit за $62 010 → продажа на Binance за $62 085. Прибыль: <span className="text-emerald-400 font-bold">+$75</span> за минуту.
+              <span className="text-blue-400 font-bold">BTC</span>: Покупка на
+              Bybit за $62 010 → продажа на Binance за $62 085. Прибыль:{" "}
+              <span className="text-emerald-400 font-bold">+$75</span> за
+              минуту.
             </p>
           </div>
           <div className="rounded-2xl bg-slate-800/40 border border-white/10 p-6">
             <p className="text-xl md:text-2xl">
-              <span className="text-purple-400 font-bold">ETH</span>: Покупка на OKX за $3 412 → продажа на KuCoin за $3 428. Прибыль: <span className="text-emerald-400 font-bold">+$16</span>.
+              <span className="text-purple-400 font-bold">ETH</span>: Покупка на
+              OKX за $3 412 → продажа на KuCoin за $3 428. Прибыль:{" "}
+              <span className="text-emerald-400 font-bold">+$16</span>.
             </p>
           </div>
         </div>
         <p className="mt-8 text-2xl font-semibold">
-          Ночь: Автоматическая серия из 27 сделок → <span className="text-emerald-400">+$527</span> чистой прибыли.
+          Ночь: Автоматическая серия из 27 сделок →{" "}
+          <span className="text-emerald-400">+$527</span> чистой прибыли.
         </p>
-        <p className="mt-2 text-slate-300">⏱️ Все сделки проходят за секунды.</p>
+        <p className="mt-2 text-slate-300">
+          ⏱️ Все сделки проходят за секунды.
+        </p>
 
         <div className="mt-10">
-          <TickerSlider items={["+$27", "+$54", "+$61", "+$32", "+$88", "+$41"]} />
+          <TickerSlider
+            items={["+$27", "+$54", "+$61", "+$32", "+$88", "+$41"]}
+          />
         </div>
       </div>
     </section>

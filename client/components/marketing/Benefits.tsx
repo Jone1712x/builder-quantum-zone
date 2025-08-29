@@ -1,6 +1,9 @@
 export default function Benefits() {
   const items = [
-    { icon: "🚀", text: "Бот не предсказывает рынок, а использует разницу цен (спреды)." },
+    {
+      icon: "🚀",
+      text: "Бот не предсказывает рынок, а использует разницу цен (спреды).",
+    },
     { icon: "📈", text: "Прибыль появляется даже при боковом рынке." },
     { icon: "🤖", text: "Работает 24/7 без участия человека." },
     { icon: "🛋️", text: "Вы отдыхаете — бот зарабатывает." },
@@ -11,7 +14,10 @@ export default function Benefits() {
         <h2 className="text-3xl md:text-5xl font-bold">Почему это работает</h2>
         <div className="mt-12 grid gap-8 md:grid-cols-4">
           {items.map((it, i) => (
-            <div key={i} className="rounded-2xl bg-slate-800/40 border border-white/10 p-6">
+            <div
+              key={i}
+              className="rounded-2xl bg-slate-800/40 border border-white/10 p-6"
+            >
               <div className="mb-3 text-3xl">{it.icon}</div>
               <p className="text-slate-300">{it.text}</p>
             </div>

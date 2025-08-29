@@ -5,7 +5,10 @@ interface Props {
   opacity?: number;
 }
 
-export default function CandlestickChart({ className = "", opacity = 0.5 }: Props) {
+export default function CandlestickChart({
+  className = "",
+  opacity = 0.5,
+}: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number | null>(null);
 
@@ -23,7 +26,14 @@ export default function CandlestickChart({ className = "", opacity = 0.5 }: Prop
 
     const onResize = () => handleResize();
 
-    type Candle = { x: number; o: number; h: number; l: number; c: number; up: boolean };
+    type Candle = {
+      x: number;
+      o: number;
+      h: number;
+      l: number;
+      c: number;
+      up: boolean;
+    };
     const candles: Candle[] = [];
 
     const seed = () => {
@@ -39,7 +49,8 @@ export default function CandlestickChart({ className = "", opacity = 0.5 }: Prop
         last = c;
       }
       // shift to right edge
-      const offset = width - candles[candles.length - 1].x - 20 * devicePixelRatio;
+      const offset =
+        width - candles[candles.length - 1].x - 20 * devicePixelRatio;
       for (const cd of candles) cd.x += offset;
     };
 
@@ -60,7 +71,12 @@ export default function CandlestickChart({ className = "", opacity = 0.5 }: Prop
         const bodyTop = Math.min(cd.o, cd.c);
         const bodyH = Math.max(2 * devicePixelRatio, Math.abs(cd.c - cd.o));
         ctx.fillStyle = color + "55"; // add transparency
-        ctx.fillRect(cd.x - 4 * devicePixelRatio, bodyTop, 8 * devicePixelRatio, bodyH);
+        ctx.fillRect(
+          cd.x - 4 * devicePixelRatio,
+          bodyTop,
+          8 * devicePixelRatio,
+          bodyH,
+        );
       }
     };
 
@@ -75,7 +91,14 @@ export default function CandlestickChart({ className = "", opacity = 0.5 }: Prop
         const c = Math.max(10, Math.min(height - 10, o + change));
         const h = Math.max(o, c) + Math.random() * height * 0.02;
         const l = Math.min(o, c) - Math.random() * height * 0.02;
-        candles.push({ x: width - 20 * devicePixelRatio, o, h, l, c, up: c >= o });
+        candles.push({
+          x: width - 20 * devicePixelRatio,
+          o,
+          h,
+          l,
+          c,
+          up: c >= o,
+        });
       }
 
       draw();
@@ -93,5 +116,11 @@ export default function CandlestickChart({ className = "", opacity = 0.5 }: Prop
     };
   }, [opacity]);
 
-  return <canvas ref={canvasRef} className={`w-full h-full ${className}`} aria-hidden />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className={`w-full h-full ${className}`}
+      aria-hidden
+    />
+  );
 }

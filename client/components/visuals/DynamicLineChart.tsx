@@ -3,12 +3,15 @@ import { useEffect, useRef } from "react";
 interface Props {
   className?: string;
   gradientFrom?: string; // tailwind color class, e.g. from-[#0B1222]
-  gradientTo?: string;   // tailwind color class
+  gradientTo?: string; // tailwind color class
   opacity?: number;
 }
 
 // Animated polyline chart background with glow
-export default function DynamicLineChart({ className = "", opacity = 0.7 }: Props) {
+export default function DynamicLineChart({
+  className = "",
+  opacity = 0.7,
+}: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number | null>(null);
 
@@ -110,5 +113,11 @@ export default function DynamicLineChart({ className = "", opacity = 0.7 }: Prop
     };
   }, [opacity]);
 
-  return <canvas ref={canvasRef} className={`w-full h-full ${className}`} aria-hidden />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className={`w-full h-full ${className}`}
+      aria-hidden
+    />
+  );
 }

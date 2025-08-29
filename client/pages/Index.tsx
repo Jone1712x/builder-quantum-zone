@@ -22,10 +22,19 @@ export default function Index() {
             CryptoArb Bot
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-slate-300">
-            <a href="#" className="hover:text-white">Главная</a>
-            <a href="#cta" className="hover:text-white">Подключить</a>
+            <a href="#" className="hover:text-white">
+              Главная
+            </a>
+            <a href="#cta" className="hover:text-white">
+              Подключить
+            </a>
           </nav>
-          <a href="#cta" className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold hover:bg-blue-500">Бесплатный доступ</a>
+          <a
+            href="#cta"
+            className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold hover:bg-blue-500"
+          >
+            Бесплатный доступ
+          </a>
         </div>
       </header>
 
@@ -42,7 +51,9 @@ export default function Index() {
 
       <footer className="border-t border-white/10 bg-[#0A0F1F] py-8 text-center text-slate-400">
         <div className="container px-6 mx-auto">
-          <p>© {new Date().getFullYear()} CryptoArb Bot. Все права защищены.</p>
+          <p>
+            © {new Date().getFullYear()} CryptoArb Bot. Все права защищены.
+          </p>
         </div>
       </footer>
 

@@ -10,7 +10,10 @@ export default function Offer() {
         <h2 className="text-3xl md:text-5xl font-bold">Что вы получаете</h2>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {items.map((it, i) => (
-            <div key={i} className="rounded-2xl bg-slate-800/40 border border-white/10 p-6">
+            <div
+              key={i}
+              className="rounded-2xl bg-slate-800/40 border border-white/10 p-6"
+            >
               <div className="mb-3 text-3xl">{it.icon}</div>
               <p className="text-slate-300">{it.text}</p>
             </div>
