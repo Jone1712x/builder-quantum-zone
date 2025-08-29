@@ -1,62 +1,52 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import Hero from "@/components/marketing/Hero";
+import Steps from "@/components/marketing/Steps";
+import Trades from "@/components/marketing/Trades";
+import Benefits from "@/components/marketing/Benefits";
+import Trust from "@/components/marketing/Trust";
+import Offer from "@/components/marketing/Offer";
+import About from "@/components/marketing/About";
+import FinalCta from "@/components/marketing/FinalCta";
+import ChatwootWidget from "@/components/integrations/ChatwootWidget";
 
 export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
   useEffect(() => {
-    fetchDemo();
+    document.documentElement.lang = "ru";
   }, []);
 
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-            />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
-      </div>
+    <div className="min-h-screen bg-[#0A0F1F] text-white">
+      <header className="sticky top-0 z-40 backdrop-blur bg-[#0A0F1F]/60 border-b border-white/10">
+        <div className="container px-6 mx-auto flex h-14 items-center justify-between">
+          <a href="#" className="font-extrabold tracking-tight text-xl">
+            CryptoArb Bot
+          </a>
+          <nav className="hidden md:flex items-center gap-6 text-sm text-slate-300">
+            <a href="#" className="hover:text-white">Главная</a>
+            <a href="#cta" className="hover:text-white">Подключить</a>
+          </nav>
+          <a href="#cta" className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold hover:bg-blue-500">Бесплатный доступ</a>
+        </div>
+      </header>
+
+      <main>
+        <Hero />
+        <Steps />
+        <Trades />
+        <Benefits />
+        <Trust />
+        <Offer />
+        <About />
+        <FinalCta />
+      </main>
+
+      <footer className="border-t border-white/10 bg-[#0A0F1F] py-8 text-center text-slate-400">
+        <div className="container px-6 mx-auto">
+          <p>© {new Date().getFullYear()} CryptoArb Bot. Все права защищены.</p>
+        </div>
+      </footer>
+
+      <ChatwootWidget />
     </div>
   );
 }

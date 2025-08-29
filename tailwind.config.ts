@@ -80,10 +80,24 @@ export default {
             height: "0",
           },
         },
+        ticker: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-33.333%)" },
+        },
+        glow: {
+          "0%": { filter: "hue-rotate(0deg)" },
+          "100%": { filter: "hue-rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        ticker: "ticker 18s linear infinite",
+        glow: "glow 12s linear infinite",
+      },
+      backgroundImage: {
+        "crypto-radial":
+          "radial-gradient(1200px_600px_at_50%_-10%,rgba(59,130,246,0.25),transparent), radial-gradient(800px_400px_at_80%_20%,rgba(99,102,241,0.15),transparent)",
       },
     },
   },
