@@ -12,7 +12,7 @@ export default function Hero() {
         preload="metadata"
         aria-hidden
       />
-      <div className="absolute inset-0 -z-20 bg-black/55" aria-hidden />
+      <div className="absolute inset-0 -z-20 bg-black/60" aria-hidden />
 
       <div className="container px-6 mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow-[0_6px_24px_rgba(37,99,235,0.35)]">
