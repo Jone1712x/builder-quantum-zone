@@ -22,7 +22,7 @@ export default function FinalCta() {
           </a>
         </div>
         <p className="mt-6 text-slate-300 text-lg">
-          «Бот бесплатно | Прибыль каждый день | Используй рынок на максимум»
+          "Бот бесплатно | Прибыль каждый день | Используй рынок на максимум"
         </p>
       </div>
     </section>
