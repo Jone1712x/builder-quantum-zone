@@ -16,12 +16,12 @@ export default function About() {
             <p className="mt-4 text-xl font-bold">Beniamin Mincu</p>
             <p className="text-slate-300">CEO</p>
             <p className="mt-2 text-slate-300 text-sm max-w-sm mx-auto">
-              Beniamin Mincu — визионер и сооснователь MultiversX, одной из самых инновационных блокчейн-компаний Европы.
+              Beniamin Mincu - визионер и сооснователь MultiversX, одной из самых инновационных блокчейн-компаний Европы.
             </p>
           </div>
           <div className="md:col-span-2">
             <p className="text-slate-300 text-lg">
-              Команда: <strong>MultiversX</strong> — блокчейн-компания, ранее известная как Elrond. Мы разрабатываем масштабируемую ��нфраструктуру Web3, поддерживаем тысячи dApps, кроссчейн-решения и экосистему DeFi/NFT. CEO — <strong>Beniamin Mincu</strong>.
+              Команда: <strong>MultiversX</strong> — блокчейн-компания, ранее известная ка�� Elrond. Мы разрабатываем масштабируемую инфраструктуру Web3, поддерживаем тысячи dApps, кроссчейн-решения и экосистему DeFi/NFT. CEO — <strong>Beniamin Mincu</strong>.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-4">
               <img
