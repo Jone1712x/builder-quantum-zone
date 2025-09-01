@@ -9,7 +9,7 @@ export default function Trades() {
           <div className="rounded-2xl bg-slate-800/40 border border-white/10 p-6">
             <p className="text-xl md:text-2xl">
               <span className="text-blue-400 font-bold">BTC</span>: Покупка на
-              Bybit за $62 010 → продажа на Binance за $62 085. Прибыль:{" "}
+              Bybit за $62 010 {"->"} продажа на Binance за $62 085. Прибыль:{" "}
               <span className="text-emerald-400 font-bold">+$75</span> за
               минуту.
             </p>
@@ -17,13 +17,13 @@ export default function Trades() {
           <div className="rounded-2xl bg-slate-800/40 border border-white/10 p-6">
             <p className="text-xl md:text-2xl">
               <span className="text-purple-400 font-bold">ETH</span>: Покупка на
-              OKX за $3 412 → продажа на KuCoin за $3 428. Прибыль:{" "}
+              OKX за $3 412 {"->"} продажа на KuCoin за $3 428. Прибыль:{" "}
               <span className="text-emerald-400 font-bold">+$16</span>.
             </p>
           </div>
         </div>
         <p className="mt-8 text-2xl font-semibold">
-          Ночь: Автоматическая серия из 27 сделок →{" "}
+          Ночь: Автоматическая серия из 27 сделок {"->"}{" "}
           <span className="text-emerald-400">+$527</span> чистой прибыли.
         </p>
         <p className="mt-2 text-slate-300">
