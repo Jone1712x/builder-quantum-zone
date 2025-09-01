@@ -13,8 +13,8 @@ export default function Videos() {
   return (
     <section className="py-20 bg-[#0A0F1F] text-white">
       <div className="container px-6 mx-auto">
-        <h2 className="text-center text-3xl md:text-5xl font-bold">Видео‑кейсы</h2>
-        <p className="mt-4 text-center text-slate-300 max-w-2xl mx-auto">Короткие ролики усилива��т доверие и визуально показывают результаты и атмосферу крипто‑сообщества.</p>
+        <h2 className="text-center text-3xl md:text-5xl font-bold">Видео-кейсы</h2>
+        <p className="mt-4 text-center text-slate-300 max-w-2xl mx-auto">Короткие ролики усиливают до��ерие и визуально показывают результаты и атмосферу крипто-сообщества.</p>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {videos.map((v) => (
             <div key={v.src} className="group rounded-2xl overflow-hidden border border-white/10 bg-slate-900/40 backdrop-blur">
