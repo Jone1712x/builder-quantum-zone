@@ -46,6 +46,7 @@ export default function Index() {
         <Trust />
         <Offer />
         <About />
+        <Videos />
         <FinalCta />
       </main>
 
