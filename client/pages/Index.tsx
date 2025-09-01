@@ -34,7 +34,7 @@ export default function Index() {
             href="#cta"
             className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold hover:bg-blue-500"
           >
-            Бесп��атный доступ
+            Бесплатный доступ
           </a>
         </div>
       </header>
