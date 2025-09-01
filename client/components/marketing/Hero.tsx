@@ -4,6 +4,16 @@ export default function Hero() {
   return (
     <section className="relative min-h-[92vh] flex items-center overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(59,130,246,0.25),transparent),radial-gradient(800px_400px_at_80%_20%,rgba(99,102,241,0.15),transparent)] bg-gradient-to-b from-[#0B1222] via-[#0E1530] to-[#0A0F1F]" />
+      <video
+        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.18] mix-blend-screen"
+        src="https://cdn.builder.io/o/assets%2F7462a4dfb7fc4ab1960ec7adb50372b4%2Fc56b523ea7ec4660b5cbe152225b11db?alt=media&token=d6102c6d-36fd-47ad-b648-a442f92471ae&apiKey=7462a4dfb7fc4ab1960ec7adb50372b4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden
+      />
       <DynamicLineChart className="absolute inset-0 -z-10" opacity={0.65} />
 
       <div className="container px-6 mx-auto text-center">
