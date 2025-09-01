@@ -7,6 +7,7 @@ import Trust from "@/components/marketing/Trust";
 import Offer from "@/components/marketing/Offer";
 import About from "@/components/marketing/About";
 import FinalCta from "@/components/marketing/FinalCta";
+import Videos from "@/components/marketing/Videos";
 import ChatwootWidget from "@/components/integrations/ChatwootWidget";
 
 export default function Index() {
@@ -33,7 +34,7 @@ export default function Index() {
             href="#cta"
             className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold hover:bg-blue-500"
           >
-            Бесплатный доступ
+            Бесп��атный доступ
           </a>
         </div>
       </header>
