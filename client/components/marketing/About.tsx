@@ -8,24 +8,20 @@ export default function About() {
         <div className="mt-12 grid gap-10 md:grid-cols-3 items-start">
           <div className="text-center md:col-span-1">
             <img
-              src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+              src="https://cdn.builder.io/api/v1/image/assets%2F7462a4dfb7fc4ab1960ec7adb50372b4%2Fe05a39931a8049af82e12664eae2ebfb"
               alt="Портрет руководителя"
               className="mx-auto h-44 w-44 rounded-full object-cover border border-white/20 shadow-[0_8px_30px_rgba(59,130,246,0.4)]"
               loading="lazy"
             />
-            <p className="mt-4 text-xl font-bold">Али Рахманов</p>
+            <p className="mt-4 text-xl font-bold">Beniamin Mincu</p>
             <p className="text-slate-300">CEO</p>
             <p className="mt-2 text-slate-300 text-sm max-w-sm mx-auto">
-              Серийный крипто-предприниматель, более 8 лет в арбитраже и
-              алгоритмической торговле.
+              Beniamin Mincu — в��зионер и сооснователь MultiversX, одной из самых инновационных блокчейн-компаний Европы.
             </p>
           </div>
           <div className="md:col-span-2">
             <p className="text-slate-300 text-lg">
-              Команда: разработчики из лучших крипто-фондов и компаний Дубая
-              (Bybit Labs, Binance MENA, OKX Research). Мы собрали специалистов
-              в трейдинге, блокчейне и кибербезопасности, чтобы сделать лучший
-              сервис для арбитража.
+              Команда: <strong>MultiversX</strong> — блокчейн-компания, ранее известная как Elrond. Мы разрабатываем масштабируемую инфраструктуру Web3, поддерживаем тысячи dApps, кроссчейн-решения и экосистему DeFi/NFT. CEO — <strong>Beniamin Mincu</strong>.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-4">
               <img
