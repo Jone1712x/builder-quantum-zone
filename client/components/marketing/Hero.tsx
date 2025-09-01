@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(59,130,246,0.25),transparent),radial-gradient(800px_400px_at_80%_20%,rgba(99,102,241,0.15),transparent)] bg-gradient-to-b from-[#0B1222] via-[#0E1530] to-[#0A0F1F]" />
       <video
         className="absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.18] mix-blend-screen"
-        src="https://cdn.builder.io/o/assets%2F7462a4dfb7fc4ab1960ec7adb50372b4%2Fc56b523ea7ec4660b5cbe152225b11db?alt=media&token=d6102c6d-36fd-47ad-b648-a442f92471ae&apiKey=7462a4dfb7fc4ab1960ec7adb50372b4"
+        src="https://cdn.builder.io/o/assets%2F7462a4dfb7fc4ab1960ec7adb50372b4%2F0fafb4e347a94b54b2b685a6b8929f0c?alt=media&token=a95b45a1-569f-4716-bc2e-0bbf5ef1852b&apiKey=7462a4dfb7fc4ab1960ec7adb50372b4"
         autoPlay
         muted
         loop
@@ -23,7 +23,7 @@ export default function Hero() {
         </h1>
         <p className="mt-6 text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto">
           «Алгоритм автоматически фиксирует разницу цен на крупнейших биржах и
-          приносит прибыль каждый день. Всё прозрачно и официально.»
+          приносит прибыль каждый день. Вс�� прозрачно и официально.»
         </p>
         <div className="mt-10">
           <a
