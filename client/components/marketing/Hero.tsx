@@ -16,12 +16,12 @@ export default function Hero() {
 
       <div className="container px-6 mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow-[0_6px_24px_rgba(37,99,235,0.35)]">
-          Зарабатывай на крипте без угадываний — наш бот для межбиржевого
+          Зарабатывай на крипте без угадываний - наш бот для межбиржевого
           арбитража работает за тебя
         </h1>
         <p className="mt-6 text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto">
-          «Алгоритм автоматически фиксирует разницу цен на крупнейших биржах и
-          приносит прибыль каждый день. Всё прозрачно и официально.»
+          "Алгоритм автоматически фиксирует разницу цен на крупнейших биржах и
+          приносит прибыль каждый день. Всё прозрачно и официально."
         </p>
         <div className="mt-10">
           <a
