@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Trust() {
   const { t } = useTranslation();
-  const items = (t("trust.items") as string[]).map((text, i) => ({
+  const items = (t("trust.items", { returnObjects: true }) as string[]).map((text, i) => ({
     icon: ["🔒", "🤝", "✅"][i],
     text,
   }));
