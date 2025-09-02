@@ -5,7 +5,6 @@ export default function Trades() {
     <section className="py-20 bg-[#0B1222] text-white">
       <div className="container px-6 mx-auto text-center">
         <h2 className="text-3xl md:text-5xl font-bold">Примеры сделок</h2>
-        <p className="mt-2 text-sm text-slate-400">Напоминаем: проект запущен в рамках бета-версии.</p>
         <div className="mt-12 grid gap-6 md:grid-cols-2 max-w-4xl mx-auto text-left">
           <div className="rounded-2xl bg-slate-800/40 border border-white/10 p-6">
             <p className="text-xl md:text-2xl">
