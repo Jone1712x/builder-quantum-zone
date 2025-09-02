@@ -7,6 +7,7 @@ const resources = {
       common: {
         brand: "CryptoArb Bot",
         allRights: "All rights reserved.",
+        back: "Back",
       },
       nav: {
         home: "Home",
@@ -124,6 +125,7 @@ const resources = {
       common: {
         brand: "CryptoArb Bot",
         allRights: "Alle Rechte vorbehalten.",
+        back: "Zurück",
       },
       nav: {
         home: "Startseite",
