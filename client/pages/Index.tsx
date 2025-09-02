@@ -23,15 +23,15 @@ export default function Index() {
             CryptoArb Bot
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-slate-300">
-            <a href="#" className="hover:text-white">
+            <a href="/" className="hover:text-white">
               Главная
             </a>
-            <a href="#cta" className="hover:text-white">
+            <a href="/kontakt" className="hover:text-white">
               Подключить
             </a>
           </nav>
           <a
-            href="#cta"
+            href="/kontakt"
             className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold hover:bg-blue-500"
           >
             Бесплатный доступ
