@@ -2,11 +2,12 @@ import { useTranslation } from "react-i18next";
 
 export default function Benefits() {
   const { t } = useTranslation();
+  const texts = t("benefits.items", { returnObjects: true }) as string[];
   const items = [
-    { icon: "🚀", text: (t("benefits.items") as string[])[0] },
-    { icon: "📈", text: (t("benefits.items") as string[])[1] },
-    { icon: "🤖", text: (t("benefits.items") as string[])[2] },
-    { icon: "🛋️", text: (t("benefits.items") as string[])[3] },
+    { icon: "🚀", text: texts[0] },
+    { icon: "📈", text: texts[1] },
+    { icon: "🤖", text: texts[2] },
+    { icon: "🛋️", text: texts[3] },
   ];
   return (
     <section className="py-20 bg-[#0A0F1F] text-white">
