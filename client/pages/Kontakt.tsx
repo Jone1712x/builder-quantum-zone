@@ -182,8 +182,8 @@ export default function Kontakt() {
           <div>{t("kontakt.hours")}</div>
           <div className="mt-1">{t("kontakt.languages")}</div>
           <div className="mt-3 flex gap-4">
-            <a href="/impressum" className="underline">{t("kontakt.imprint")}</a>
-            <a href="/datenschutz" className="underline">{t("kontakt.privacyLink")}</a>
+            <span className="underline cursor-default select-text">{t("kontakt.imprint")}</span>
+            <span className="underline cursor-default select-text">{t("kontakt.privacyLink")}</span>
           </div>
         </div>
       </section>
