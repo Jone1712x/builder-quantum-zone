@@ -27,7 +27,6 @@ export default function Videos() {
                   className="absolute inset-0 h-full w-full object-cover"
                   autoPlay
                   muted
-                  defaultMuted
                   loop
                   playsInline
                   preload="metadata"
