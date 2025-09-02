@@ -261,6 +261,12 @@ if (!i18n.isInitialized) {
       returnObjects: true,
     });
 
+  try {
+    const cur = i18n.language;
+    document.documentElement.lang = cur;
+    localStorage.setItem("lang", cur);
+  } catch {}
+
   i18n.on("languageChanged", (lng) => {
     try {
       document.documentElement.lang = lng;
