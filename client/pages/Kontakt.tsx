@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Mail, MessageCircle, Send } from "lucide-react";
+import { ArrowLeft, Mail, MessageCircle, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 export default function Kontakt() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const onSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
@@ -25,7 +27,20 @@ export default function Kontakt() {
 
   return (
     <div className="bg-[#0A0F1F] text-white">
-      <section className="py-16 md:py-24">
+      <section className="pt-4">
+        <div className="container px-6 mx-auto max-w-4xl">
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            className="inline-flex items-center gap-2 text-slate-300 hover:text-white hover:underline"
+            aria-label={t("common.back") as string}
+          >
+            <ArrowLeft className="h-4 w-4" /> {t("common.back")}
+          </button>
+        </div>
+      </section>
+
+      <section className="py-6 md:py-8">
         <div className="container px-6 mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">{t("kontakt.title")}</h1>
           <p className="mt-4 text-slate-300 text-lg md:text-xl">{t("kontakt.subtitle")}</p>
