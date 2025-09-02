@@ -1,26 +1,17 @@
+import { useTranslation } from "react-i18next";
+
 export default function Steps() {
+  const { t } = useTranslation();
   const items = [
-    {
-      icon: "🔍",
-      title: "Анализ цен",
-      text: "Бот анализирует цены на десятках бирж в реальном времени.",
-    },
-    {
-      icon: "⚡",
-      title: "Поиск разницы",
-      text: "Находит разницу - покупает дешевле, продаёт дороже.",
-    },
-    {
-      icon: "💰",
-      title: "Фиксация прибыли",
-      text: "Фиксирует прибыль и возвращает результат на ваш счёт.",
-    },
+    { icon: "🔍", ...(t("steps.items") as any)[0] },
+    { icon: "⚡", ...(t("steps.items") as any)[1] },
+    { icon: "💰", ...(t("steps.items") as any)[2] },
   ];
 
   return (
     <section className="py-20 bg-[#0A0F1F] text-white">
       <div className="container px-6 mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-bold">Как это работает</h2>
+        <h2 className="text-3xl md:text-5xl font-bold">{t("steps.title")}</h2>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {items.map((it) => (
             <div
@@ -35,10 +26,7 @@ export default function Steps() {
             </div>
           ))}
         </div>
-        <p className="mt-10 text-slate-300">
-          Всё проходит через официальные API крупнейших бирж: Binance, Bybit,
-          OKX, KuCoin, Huobi.
-        </p>
+        <p className="mt-10 text-slate-300">{t("steps.api")}</p>
       </div>
     </section>
   );
