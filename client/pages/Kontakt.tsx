@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowLeft, Mail, MessageCircle, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Kontakt() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -28,7 +29,7 @@ export default function Kontakt() {
   return (
     <div className="bg-[#0A0F1F] text-white">
       <section className="pt-4">
-        <div className="container px-6 mx-auto max-w-4xl">
+        <div className="container px-6 mx-auto max-w-4xl flex items-center justify-between">
           <button
             type="button"
             onClick={() => navigate(-1)}
@@ -37,6 +38,7 @@ export default function Kontakt() {
           >
             <ArrowLeft className="h-4 w-4" /> {t("common.back")}
           </button>
+          <LanguageSwitcher />
         </div>
       </section>
 
@@ -134,6 +136,17 @@ export default function Kontakt() {
               </div>
             </div>
             <div>
+              <label htmlFor="telegram" className="block text-sm text-slate-300 mb-1">
+                {t("kontakt.telegramLabel")}
+              </label>
+              <input
+                id="telegram"
+                name="telegram"
+                className="w-full rounded-lg bg-slate-900/50 border border-white/10 px-3 py-2 outline-none focus:border-blue-500"
+                placeholder={t("kontakt.telegramPlaceholder") as string}
+              />
+            </div>
+            <div>
               <label htmlFor="msg" className="block text-sm text-slate-300 mb-1">
                 {t("kontakt.message")}
               </label>
@@ -145,12 +158,6 @@ export default function Kontakt() {
                 className="w-full rounded-lg bg-slate-900/50 border border-white/10 px-3 py-2 outline-none focus:border-blue-500"
                 placeholder={t("kontakt.messagePlaceholder") as string}
               />
-            </div>
-            <div className="flex items-start gap-3">
-              <input id="consent" name="consent" type="checkbox" required className="mt-1" />
-              <label htmlFor="consent" className="text-sm text-slate-300">
-                {t("kontakt.consent1")}<a href="/datenschutz" className="underline hover:text-white">{t("kontakt.privacy")}</a>{t("kontakt.consent2")}
-              </label>
             </div>
             <button
               type="submit"
