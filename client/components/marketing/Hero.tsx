@@ -7,6 +7,7 @@ export default function Hero() {
         src="https://cdn.builder.io/o/assets%2F7462a4dfb7fc4ab1960ec7adb50372b4%2F56c5bf01fa2f443d97171c4909f7c718?alt=media&token=850c2400-9934-436e-ab5c-4e148b1294c5&apiKey=7462a4dfb7fc4ab1960ec7adb50372b4"
         autoPlay
         muted
+        defaultMuted
         loop
         playsInline
         preload="metadata"
