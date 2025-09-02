@@ -19,10 +19,9 @@ export default function Index() {
     <div className="min-h-screen bg-[#0A0F1F] text-white">
       <header className="sticky top-0 z-40 backdrop-blur bg-[#0A0F1F]/60 border-b border-white/10">
         <div className="container px-6 mx-auto flex h-14 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <a href="#" className="font-extrabold tracking-tight text-xl">CryptoArb Bot</a>
-            <span className="rounded-md bg-orange-500/90 text-white text-[10px] px-2 py-0.5 uppercase tracking-wide">Beta</span>
-          </div>
+          <a href="#" className="font-extrabold tracking-tight text-xl">
+            CryptoArb Bot
+          </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-slate-300">
             <a href="#" className="hover:text-white">
               Главная
@@ -55,7 +54,6 @@ export default function Index() {
       <footer className="border-t border-white/10 bg-[#0A0F1F] py-8 text-center text-slate-400">
         <div className="container px-6 mx-auto space-y-2">
           <p>© {new Date().getFullYear()} CryptoArb Bot. Все права защищены.</p>
-          <p className="text-xs text-slate-500">Данный сервис работает в режиме бета-тестирования. Возможны временные ошибки и ограничения.</p>
         </div>
       </footer>
 
