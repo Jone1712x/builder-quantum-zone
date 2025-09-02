@@ -1,13 +1,17 @@
+import { useTranslation } from "react-i18next";
+
 export default function Offer() {
+  const { t } = useTranslation();
+  const texts = t("offer.items") as string[];
   const items = [
-    { icon: "✅", text: "Бесплатное подключение бота." },
-    { icon: "🎓", text: "Пошаговое обучение (видео + инструкция)." },
-    { icon: "🛠️", text: "Поддержка 24/7 (через Chatwoot)." },
+    { icon: "✅", text: texts[0] },
+    { icon: "🎓", text: texts[1] },
+    { icon: "🛠️", text: texts[2] },
   ];
   return (
     <section className="py-20 bg-[#0A0F1F] text-white">
       <div className="container px-6 mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-bold">Что вы получаете</h2>
+        <h2 className="text-3xl md:text-5xl font-bold">{t("offer.title")}</h2>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {items.map((it, i) => (
             <div
