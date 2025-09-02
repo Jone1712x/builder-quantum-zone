@@ -9,7 +9,7 @@ export default function Trades() {
           <div className="rounded-2xl bg-slate-800/40 border border-white/10 p-6">
             <p className="text-xl md:text-2xl">
               <span className="text-blue-400 font-bold">BTC</span>: Покупка на
-              Bybit за $62 010 {"->"} продажа на Binance за $62 085. Прибыль:{" "}
+              Bybit за $110 010 {"->"} продажа на Binance за $111 685. Прибыль:{" "}
               <span className="text-emerald-400 font-bold">+$75</span> за
               минуту.
             </p>
