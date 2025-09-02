@@ -17,7 +17,7 @@ export default function Trades() {
           <div className="rounded-2xl bg-slate-800/40 border border-white/10 p-6">
             <p className="text-xl md:text-2xl">
               <span className="text-purple-400 font-bold">ETH</span>: Покупка на
-              OKX за $3 412 {"->"} продажа на KuCoin за $3 428. Прибыль:{" "}
+              OKX за $4 412 {"->"} продажа на KuCoin за $4 428. Прибыль:{" "}
               <span className="text-emerald-400 font-bold">+$16</span>.
             </p>
           </div>
