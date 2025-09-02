@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Offer() {
   const { t } = useTranslation();
-  const texts = t("offer.items") as string[];
+  const texts = t("offer.items", { returnObjects: true }) as string[];
   const items = [
     { icon: "✅", text: texts[0] },
     { icon: "🎓", text: texts[1] },
