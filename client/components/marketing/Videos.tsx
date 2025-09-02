@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export default function Videos() {
+  const { t } = useTranslation();
   const videos = [
     {
       src: "https://cdn.builder.io/o/assets%2F7462a4dfb7fc4ab1960ec7adb50372b4%2Fc56b523ea7ec4660b5cbe152225b11db?alt=media&token=d6102c6d-36fd-47ad-b648-a442f92471ae&apiKey=7462a4dfb7fc4ab1960ec7adb50372b4",
@@ -13,8 +16,8 @@ export default function Videos() {
   return (
     <section className="py-20 bg-[#0A0F1F] text-white">
       <div className="container px-6 mx-auto">
-        <h2 className="text-center text-3xl md:text-5xl font-bold">Видео-кейсы</h2>
-        <p className="mt-4 text-center text-slate-300 max-w-2xl mx-auto">Другие наши проекты</p>
+        <h2 className="text-center text-3xl md:text-5xl font-bold">{t("videos.title")}</h2>
+        <p className="mt-4 text-center text-slate-300 max-w-2xl mx-auto">{t("videos.subtitle")}</p>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {videos.map((v) => (
             <div key={v.src} className="group rounded-2xl overflow-hidden border border-white/10 bg-slate-900/40 backdrop-blur">
