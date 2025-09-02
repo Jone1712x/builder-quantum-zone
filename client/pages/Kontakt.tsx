@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Mail, MessageCircle, Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Kontakt() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const { t } = useTranslation();
 
   const onSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
@@ -25,10 +27,8 @@ export default function Kontakt() {
     <div className="bg-[#0A0F1F] text-white">
       <section className="py-16 md:py-24">
         <div className="container px-6 mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Kontaktieren Sie uns</h1>
-          <p className="mt-4 text-slate-300 text-lg md:text-xl">
-            Wir antworten schnell und unkompliziert — wählen Sie den Kanal, der Ihnen am besten passt.
-          </p>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">{t("kontakt.title")}</h1>
+          <p className="mt-4 text-slate-300 text-lg md:text-xl">{t("kontakt.subtitle")}</p>
         </div>
       </section>
 
@@ -46,14 +46,14 @@ export default function Kontakt() {
                 <Send className="h-5 w-5" />
               </span>
               <div>
-                <div className="text-xl font-semibold">Mit Telegram schreiben</div>
-                <div className="text-sm text-slate-400">Antwort in ~5 Min.</div>
+                <div className="text-xl font-semibold">{t("kontakt.telegram")}</div>
+                <div className="text-sm text-slate-400">{t("kontakt.reply5min")}</div>
               </div>
             </div>
           </a>
 
           <a
-            href="https://wa.me/<nummer>?text=Hallo!%20Ich%20möchte%20CryptoArb%20Bot%20anschließen"
+            href="https://wa.me/<nummer>?text=Hallo!%20Ich%20m%C3%B6chte%20CryptoArb%20Bot%20anschlie%C3%9Fen"
             target="_blank"
             rel="noopener noreferrer"
             className="group rounded-2xl border border-white/10 bg-slate-900/40 p-6 hover:border-emerald-500/50 transition-colors"
@@ -63,8 +63,8 @@ export default function Kontakt() {
                 <MessageCircle className="h-5 w-5" />
               </span>
               <div>
-                <div className="text-xl font-semibold">Mit WhatsApp schreiben</div>
-                <div className="text-sm text-slate-400">Antwort in ~5 Min.</div>
+                <div className="text-xl font-semibold">{t("kontakt.whatsapp")}</div>
+                <div className="text-sm text-slate-400">{t("kontakt.reply5min")}</div>
               </div>
             </div>
           </a>
@@ -78,8 +78,8 @@ export default function Kontakt() {
                 <Mail className="h-5 w-5" />
               </span>
               <div>
-                <div className="text-xl font-semibold">E-Mail senden</div>
-                <div className="text-sm text-slate-400">Antwort am selben Tag.</div>
+                <div className="text-xl font-semibold">{t("kontakt.email")}</div>
+                <div className="text-sm text-slate-400">{t("kontakt.replyDay")}</div>
               </div>
             </div>
           </a>
@@ -89,24 +89,24 @@ export default function Kontakt() {
       {/* Contact form */}
       <section className="py-12">
         <div className="container px-6 mx-auto max-w-3xl">
-          <h2 className="text-2xl md:text-3xl font-bold">Kontaktformular</h2>
+          <h2 className="text-2xl md:text-3xl font-bold">{t("kontakt.formTitle")}</h2>
           <form className="mt-6 space-y-4" onSubmit={onSubmit} noValidate>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="name" className="block text-sm text-slate-300 mb-1">
-                  Name
+                  {t("kontakt.name")}
                 </label>
                 <input
                   id="name"
                   name="name"
                   required
                   className="w-full rounded-lg bg-slate-900/50 border border-white/10 px-3 py-2 outline-none focus:border-blue-500"
-                  placeholder="Ihr Name"
+                  placeholder={t("kontakt.yourName") as string}
                 />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm text-slate-300 mb-1">
-                  E-Mail
+                  {t("kontakt.emailLabel")}
                 </label>
                 <input
                   id="email"
@@ -114,13 +114,13 @@ export default function Kontakt() {
                   type="email"
                   required
                   className="w-full rounded-lg bg-slate-900/50 border border-white/10 px-3 py-2 outline-none focus:border-blue-500"
-                  placeholder="name@mail.de"
+                  placeholder={t("kontakt.emailPlaceholder") as string}
                 />
               </div>
             </div>
             <div>
               <label htmlFor="msg" className="block text-sm text-slate-300 mb-1">
-                Nachricht
+                {t("kontakt.message")}
               </label>
               <textarea
                 id="msg"
@@ -128,17 +128,13 @@ export default function Kontakt() {
                 required
                 rows={5}
                 className="w-full rounded-lg bg-slate-900/50 border border-white/10 px-3 py-2 outline-none focus:border-blue-500"
-                placeholder="Wie können wir helfen?"
+                placeholder={t("kontakt.messagePlaceholder") as string}
               />
             </div>
             <div className="flex items-start gap-3">
               <input id="consent" name="consent" type="checkbox" required className="mt-1" />
               <label htmlFor="consent" className="text-sm text-slate-300">
-                Ich stimme der Verarbeitung meiner Daten gemäß {" "}
-                <a href="/datenschutz" className="underline hover:text-white">
-                  Datenschutzerklärung
-                </a>{" "}
-                zu.
+                {t("kontakt.consent1")}<a href="/datenschutz" className="underline hover:text-white">{t("kontakt.privacy")}</a>{t("kontakt.consent2")}
               </label>
             </div>
             <button
@@ -146,13 +142,13 @@ export default function Kontakt() {
               disabled={status === "loading"}
               className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white shadow-[0_8px_30px_rgba(59,130,246,0.4)] hover:bg-blue-500 disabled:opacity-60"
             >
-              {status === "loading" ? "Senden…" : "Senden"}
+              {status === "loading" ? t("kontakt.sending") : t("kontakt.send")}
             </button>
             {status === "success" && (
-              <p className="text-emerald-400 text-sm">Danke! Wir melden uns innerhalb von 24h.</p>
+              <p className="text-emerald-400 text-sm">{t("kontakt.success")}</p>
             )}
             {status === "error" && (
-              <p className="text-red-400 text-sm">Fehler. Bitte erneut versuchen oder per E-Mail schreiben.</p>
+              <p className="text-red-400 text-sm">{t("kontakt.error")}</p>
             )}
           </form>
         </div>
@@ -161,11 +157,11 @@ export default function Kontakt() {
       {/* Info block */}
       <section className="py-12">
         <div className="container px-6 mx-auto max-w-3xl text-slate-300 text-sm">
-          <div>Öffnungszeiten: Mo–Fr 10:00���19:00 CET</div>
-          <div className="mt-1">Sprachen: Deutsch · English · Русский</div>
+          <div>{t("kontakt.hours")}</div>
+          <div className="mt-1">{t("kontakt.languages")}</div>
           <div className="mt-3 flex gap-4">
-            <a href="/impressum" className="underline">Impressum</a>
-            <a href="/datenschutz" className="underline">Datenschutzerklärung</a>
+            <a href="/impressum" className="underline">{t("kontakt.imprint")}</a>
+            <a href="/datenschutz" className="underline">{t("kontakt.privacyLink")}</a>
           </div>
         </div>
       </section>
@@ -174,10 +170,10 @@ export default function Kontakt() {
       <div className="fixed inset-x-0 bottom-0 z-40 md:hidden p-3 bg-gradient-to-t from-[#0A0F1F] via-[#0A0F1F]/95 to-transparent">
         <div className="container px-3 mx-auto max-w-3xl grid grid-cols-2 gap-3">
           <a href="#quick" className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white shadow hover:bg-blue-500">
-            <Send className="h-5 w-5" /> Telegram
+            <Send className="h-5 w-5" /> {t("kontakt.telegramShort")}
           </a>
           <a href="#quick" className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-4 py-3 font-semibold text-white shadow hover:bg-emerald-400">
-            <MessageCircle className="h-5 w-5" /> WhatsApp
+            <MessageCircle className="h-5 w-5" /> {t("kontakt.whatsappShort")}
           </a>
         </div>
       </div>
