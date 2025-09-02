@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export default function Hero() {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-[92vh] flex items-center overflow-hidden">
       <div className="absolute inset-0 -z-30 md:hidden bg-[#0b0c22]" />
@@ -17,19 +20,17 @@ export default function Hero() {
 
       <div className="container px-6 mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow-[0_6px_24px_rgba(37,99,235,0.35)]">
-          Зарабатывай на крипте без угадываний - наш бот для межбиржевого
-          арбитража работает за тебя
+          {t("hero.title")}
         </h1>
         <p className="mt-6 text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto">
-          "Алгоритм автоматически фиксирует разницу цен на крупнейших биржах и
-          приносит прибыль каждый день. Всё прозрачно и официально."
+          {t("hero.subtitle")}
         </p>
         <div className="mt-10">
           <a
             href="/kontakt"
             className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-lg md:text-xl font-semibold text-white shadow-[0_8px_30px_rgba(59,130,246,0.6)] hover:bg-blue-500 transition-transform hover:scale-[1.02]"
           >
-            🔵 Подключить бота бесплатно
+            🔵 {t("hero.button")}
           </a>
         </div>
       </div>
