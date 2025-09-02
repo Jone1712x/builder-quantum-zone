@@ -19,7 +19,7 @@ export default function ChatwootWidget() {
 
   return (
     <a
-      href={`mailto:${SUPPORT_EMAIL}?subject=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0`}
+      href="/kontakt"
       className="fixed bottom-4 right-4 z-50 inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-3 text-white shadow-lg hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
       aria-label="Связаться с поддержкой"
     >
