@@ -2,10 +2,11 @@ import { useTranslation } from "react-i18next";
 
 export default function Steps() {
   const { t } = useTranslation();
+  const texts = t("steps.items", { returnObjects: true }) as { title: string; text: string }[];
   const items = [
-    { icon: "🔍", ...(t("steps.items") as any)[0] },
-    { icon: "⚡", ...(t("steps.items") as any)[1] },
-    { icon: "💰", ...(t("steps.items") as any)[2] },
+    { icon: "🔍", ...texts[0] },
+    { icon: "⚡", ...texts[1] },
+    { icon: "💰", ...texts[2] },
   ];
 
   return (
