@@ -39,6 +39,8 @@ const resources = {
           "BTC: Buy on Bybit for $110,010 -> sell on Binance for $111,685. Profit: +$75 per minute.",
         ex2:
           "ETH: Buy on OKX for $4,412 -> sell on KuCoin for $4,428. Profit: +$16.",
+        summaryInfo:
+          "This is an example of trades — on a regular market day, there are 15–20 such trades per day; during active market phases or news events, it can be 30–45",
         summary: "Night: Automatic series of 27 trades -> +$527 net profit.",
         speed: "All trades execute within seconds.",
       },
@@ -160,6 +162,8 @@ const resources = {
           "BTC: Kauf auf Bybit für $110.010 -> Verkauf auf Binance für $111.685. Gewinn: +$75 pro Minute.",
         ex2:
           "ETH: Kauf auf OKX für $4.412 -> Verkauf auf KuCoin für $4.428. Gewinn: +$16.",
+        summaryInfo:
+          "Dies ist ein Beispiel für Trades — an einem normalen Markttag gibt es 15–20 solcher Trades pro Tag; in aktiven Marktphasen oder bei Nachrichtenereignissen können es 30–45 sein.",
         summary: "Nacht: Automatische Serie von 27 Trades -> +$527 Nettogewinn.",
         speed: "Alle Trades werden in Sekunden ausgeführt.",
       },

@@ -15,7 +15,10 @@ export default function Trades() {
             <p className="text-xl md:text-2xl">{t("trades.ex2")}</p>
           </div>
         </div>
-        <p className="mt-8 text-2xl font-semibold">{t("trades.summary")}</p>
+        <div className="mt-8 text-2xl font-semibold">
+          <p>{t("trades.summaryInfo")}</p>
+          <p>{t("trades.summary")}</p>
+        </div>
         <p className="mt-2 text-slate-300">⏱️ {t("trades.speed")}</p>
 
         <div className="mt-10">
