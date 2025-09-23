@@ -91,6 +91,40 @@ const resources = {
         title: "Video cases",
         subtitle: "Other projects of ours",
       },
+      reviews: {
+        title: "Real user reviews",
+        subtitle: "From beginners to crypto whales — used worldwide",
+        ctaStart: "Get started free",
+        items: [
+          { meta: "Deposit: $1,150  •  Today", text: "The bot doesn't hold positions long — buys lower, sells higher. Scales without issues.", name: "Lukas M." },
+          { meta: "Deposit: $2,320  •  This week", text: "No guessing, just arbitrage. Setup in 15 min, support is very fast.", name: "Katharina M." },
+          { meta: "Deposit: $3,577  •  2 days ago", text: "Now I see small profits daily. Windows v1.4 + guide — really simple.", name: "Jonas P." },
+          { meta: "Deposit: $835  •  Yesterday", text: "Sometimes there are multiple trades per minute — visible even on a small account.", name: "Helena M." },
+          { meta: "Deposit: $5,338  •  8 hours ago", text: "+1.1% in a month. I like that deposits remain separate.", name: "Sven K." },
+          { meta: "Deposit: $973  •  Today", text: "+$500 overnight — laptop was closed. Clean execution.", name: "Leo F." }
+        ],
+        showAll: "Show all 70 reviews",
+        statsSatisfied: "93% of users are satisfied",
+        countriesLabel: "countries",
+        volumeLabel: "volume processed by users",
+        quotes: [
+          "Sometimes trades are too fast — I can't keep up manually",
+          "Scales well with volume",
+          "+$500 overnight — didn't even open the laptop"
+        ],
+        formTitle: "Leave a review",
+        formTagline: "Reviews automatically adapt to your language.",
+        formNickname: "Nickname",
+        formAge: "Age",
+        formDeposit: "Deposit (e.g., $250)",
+        formText: "Review text",
+        formSubmit: "Submit",
+        bottomCtaTitle: "Join the community and leave a review",
+        bottomCtaButton: "Leave a review",
+        bottomCtaSmall: "Your feedback makes the bot better and more transparent.",
+        langEN: "EN",
+        langDE: "DE"
+      },
       kontakt: {
         title: "Contact us",
         subtitle:
@@ -200,7 +234,7 @@ const resources = {
         ceoName: "Beniamin Mincu",
         ceoRole: "CEO",
         ceoBio:
-          "Beniamin Mincu ist Visionär und Mitgründer von MultiversX, einem der innovativsten Blockchain-Unternehmen Europas.",
+          "Beniamin Mincu ist Visionär und Mitgr��nder von MultiversX, einem der innovativsten Blockchain-Unternehmen Europas.",
         company:
           "Team: MultiversX — ein Blockchain-Unternehmen, früher bekannt als Elrond. Wir entwickeln skalierbare Web3-Infrastruktur, unterstützen Tausende dApps, Cross-Chain-Lösungen und ein DeFi/NFT-Ökosystem. CEO — Beniamin Mincu.",
         img1Alt: "Foto von einem Krypto-Event in Dubai",
@@ -214,6 +248,40 @@ const resources = {
       videos: {
         title: "Video-Cases",
         subtitle: "Unsere weiteren Projekte",
+      },
+      reviews: {
+        title: "Echte Nutzerbewertungen",
+        subtitle: "Von Einsteigern bis Krypto‑Walen — weltweit im Einsatz",
+        ctaStart: "Kostenlos starten",
+        items: [
+          { meta: "Einzahlung: $1.150  •  Heute", text: "Der Bot hält Positionen nicht lange – kauft günstiger, verkauft teurer. Skalierung ohne Probleme.", name: "Lukas M." },
+          { meta: "Einzahlung: $2.320  •  Diese Woche", text: "Keine Ratespiele, nur Arbitrage. Einrichtung in 15 Min., Support sehr schnell.", name: "Katharina M." },
+          { meta: "Einzahlung: $3.577  •  Vor 2 Tagen", text: "Sehe jetzt täglich kleine Gewinne. Windows v1.4 + Anleitung – wirklich einfach.", name: "Jonas P." },
+          { meta: "Einzahlung: $835  •  Gestern", text: "Manchmal gibt es mehrere Trades pro Minute – auf kleinem Konto sichtbar.", name: "Helena M." },
+          { meta: "Einzahlung: $5.338  •  Vor 8 Stunden", text: "War +1,1 % in einem Monat. Gefällt, dass die Einzahlungen getrennt bleiben.", name: "Sven K." },
+          { meta: "Einzahlung: $973  •  Heute", text: "+$500 über Nacht – Laptop war sogar zu. Sauber ausgeführt.", name: "Leo F." }
+        ],
+        showAll: "Alle 70 Bewertungen anzeigen",
+        statsSatisfied: "93% der Nutzer sind zufrieden",
+        countriesLabel: "Länder",
+        volumeLabel: "von Nutzern abgewickeltes Volumen",
+        quotes: [
+          "Manchmal sind Trades zu schnell – manuell komme ich nicht hinterher",
+          "Skaliert gut mit dem Volumen",
+          "+$500 über Nacht – Laptop nicht einmal geöffnet"
+        ],
+        formTitle: "Bewertung hinterlassen",
+        formTagline: "Bewertungen passen sich automatisch Ihrer Sprache an.",
+        formNickname: "Nickname",
+        formAge: "Alter",
+        formDeposit: "Einzahlung (z. B. $250)",
+        formText: "Bewertungstext",
+        formSubmit: "Senden",
+        bottomCtaTitle: "Tritt der Community bei und hinterlasse eine Bewertung",
+        bottomCtaButton: "Bewertung hinterlassen",
+        bottomCtaSmall: "Dein Feedback macht den Bot besser und transparenter.",
+        langEN: "EN",
+        langDE: "DE"
       },
       kontakt: {
         title: "Kontaktieren Sie uns",
