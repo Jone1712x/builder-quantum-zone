@@ -25,6 +25,9 @@ export default function Index() {
             <a href="/" className="hover:text-white">
               {t("nav.home")}
             </a>
+            <a href="/bewertungen" className="hover:text-white">
+              {t("nav.reviews")}
+            </a>
             <a href="/kontakt" className="hover:text-white">
               {t("nav.connect")}
             </a>
@@ -64,6 +67,15 @@ export default function Index() {
       </footer>
 
       <ChatwootWidget />
+
+      <a
+        aria-label="View reviews"
+        href="/bewertungen"
+        className="fixed bottom-4 left-4 z-50 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-3 text-white shadow-lg hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      >
+        <span className="text-xl">⭐</span>
+        <span className="hidden sm:inline">{t("nav.reviews")}</span>
+      </a>
     </div>
   );
 }

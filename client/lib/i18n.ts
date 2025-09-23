@@ -11,6 +11,7 @@ const resources = {
       },
       nav: {
         home: "Home",
+        reviews: "Reviews",
         connect: "Connect",
         freeAccess: "Free access",
       },
@@ -133,6 +134,7 @@ const resources = {
       },
       nav: {
         home: "Startseite",
+        reviews: "Bewertungen",
         connect: "Verbinden",
         freeAccess: "Kostenloser Zugang",
       },
