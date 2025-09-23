@@ -1,12 +1,73 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ChatwootWidget from "@/components/integrations/ChatwootWidget";
 import { useTranslation } from "react-i18next";
+import { useEffect, useMemo, useState } from "react";
+
+type Review = { meta: string; text: string; name: string };
 
 export default function Bewertungen() {
   const { t, i18n } = useTranslation();
   const isDE = i18n.language?.toLowerCase().startsWith("de");
-  const items = (t("reviews.items") as any[]) as { meta: string; text: string; name: string }[];
+  const baseItems = useMemo(() => (t("reviews.items") as any[]) as Review[], [t, i18n.language]);
   const quotes = (t("reviews.quotes") as any[]) as string[];
+
+  const [displayItems, setDisplayItems] = useState<Review[]>(baseItems);
+  const [extraShown, setExtraShown] = useState(false);
+
+  useEffect(() => {
+    setDisplayItems(baseItems);
+    setExtraShown(false);
+  }, [baseItems, i18n.language]);
+
+  const genMore = (count: number): Review[] => {
+    const locale = isDE ? "de-DE" : "en-US";
+    const nf = new Intl.NumberFormat(locale);
+    const relTimesEN = ["Today", "Yesterday", "2 days ago", "3 days ago", "4 days ago", "This week", "Last week", "This month", "8 hours ago"];
+    const relTimesDE = ["Heute", "Gestern", "Vor 2 Tagen", "Vor 3 Tagen", "Vor 4 Tagen", "Diese Woche", "Letzte Woche", "Diesen Monat", "Vor 8 Stunden"];
+    const names = isDE
+      ? ["Max L.", "Sophie K.", "Felix R.", "Anna W.", "Paul S.", "Lea N.", "Tim F.", "Nina G.", "Erik H.", "Mara Z."]
+      : ["Alex T.", "Emily R.", "Chris D.", "Sarah P.", "Michael B.", "Olivia K.", "Daniel S.", "Grace L.", "Henry V.", "Mia C."];
+    const textsEN = [
+      "Steady daily gains. Setup was painless.",
+      "Clear UI and fast execution — impressed so far.",
+      "Pairs rotate often, spreads are real.",
+      "Nice that funds stay in my exchange accounts.",
+      "No predictions, just spread capture — exactly what I wanted.",
+      "Support answered within minutes.",
+      "Multiple trades in under a minute today.",
+      "The guide was enough to get me started.",
+      "Works while my laptop sleeps.",
+      "Profit small but consistent — that's key."
+    ];
+    const textsDE = [
+      "Stetige tägliche Gewinne. Einrichtung war problemlos.",
+      "Übersichtliches UI und schnelle Ausführung — bin beeindruckt.",
+      "Paare wechseln oft, Spreads sind real.",
+      "Gut, dass Gelder auf meinen Börsenkonten bleiben.",
+      "Keine Prognosen, nur Spreads — genau das wollte ich.",
+      "Support hat in Minuten geantwortet.",
+      "Mehrere Trades in unter einer Minute heute.",
+      "Die Anleitung hat zum Start gereicht.",
+      "Läuft, während mein Laptop zu ist.",
+      "Gewinne klein aber konstant — das zählt."
+    ];
+
+    return Array.from({ length: count }).map((_, i) => {
+      const amount = Math.floor(300 + Math.random() * 6000);
+      const amountStr = `$${nf.format(amount)}`;
+      const time = (isDE ? relTimesDE : relTimesEN)[i % (isDE ? relTimesDE.length : relTimesEN.length)];
+      const meta = isDE ? `Einzahlung: ${amountStr}  •  ${time}` : `Deposit: ${amountStr}  •  ${time}`;
+      const text = (isDE ? textsDE : textsEN)[i % (isDE ? textsDE.length : textsEN.length)];
+      const name = names[i % names.length];
+      return { meta, text, name };
+    });
+  };
+
+  const onShowMore = () => {
+    if (extraShown) return;
+    setDisplayItems((prev) => [...prev, ...genMore(20)]);
+    setExtraShown(true);
+  };
 
   return (
     <div className="min-h-screen bg-[#0A0F1F] text-white flex flex-col">
@@ -59,7 +120,7 @@ export default function Bewertungen() {
 
         <section className="container mx-auto px-6 py-10">
           <div className="grid gap-4 md:grid-cols-3">
-            {items.map((r, i) => (
+            {displayItems.map((r, i) => (
               <div key={i} className="rounded-2xl bg-white/5 border border-white/10 p-5 text-left">
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-slate-300">{r.meta}</div>
@@ -78,7 +139,9 @@ export default function Bewertungen() {
 
         <section className="container mx-auto px-6 pb-10">
           <div className="flex flex-col items-center">
-            <button className="rounded-md border border-white/20 px-4 py-2 text-sm hover:bg-white/5">{t("reviews.showAll")}</button>
+            {!extraShown && (
+              <button onClick={onShowMore} className="rounded-md border border-white/20 px-4 py-2 text-sm hover:bg-white/5">{t("reviews.showAll")}</button>
+            )}
           </div>
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
