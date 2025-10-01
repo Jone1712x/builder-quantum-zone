@@ -2,9 +2,10 @@ import { useTranslation } from "react-i18next";
 
 export default function Trust() {
   const { t } = useTranslation();
-  const items = (t("trust.items", { returnObjects: true }) as string[]).map((text, i) => ({
+  const rawItems = t("trust.items", { returnObjects: true }) as any[];
+  const items = rawItems.map((entry, i) => ({
     icon: ["🔒", "🤝", "✅"][i],
-    text,
+    paras: Array.isArray(entry) ? entry : [entry],
   }));
   return (
     <section className="py-20 bg-[#0B1222] text-white">
@@ -17,7 +18,11 @@ export default function Trust() {
               className="rounded-2xl bg-slate-800/40 border border-white/10 p-6 flex items-center justify-center gap-3"
             >
               <div className="text-2xl">{it.icon}</div>
-              <p className="text-slate-300">{it.text}</p>
+              <div className="text-slate-300 space-y-2">
+                {it.paras.map((p: string, idx: number) => (
+                  <p key={idx}>{i === 1 && idx === 0 ? <strong>{p}</strong> : p}</p>
+                ))}
+              </div>
             </div>
           ))}
         </div>
