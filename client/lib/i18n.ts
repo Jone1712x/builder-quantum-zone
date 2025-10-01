@@ -212,9 +212,28 @@ const resources = {
       steps: {
         title: "So funktioniert es",
         items: [
-          { title: "Preisanalyse", text: "Der Bot analysiert in Echtzeit Preise auf Dutzenden von Börsen." },
-          { title: "Spreads finden", text: "Findet Unterschiede – kauft günstiger, verkauft teurer." },
-          { title: "Gewinn sichern", text: "Sichert den Gewinn und überträgt das Ergebnis auf Ihr Konto." },
+          {
+            title: "Preisanalyse",
+            text: [
+              "Unser Bot analysiert den Markt in Echtzeit und identifiziert Arbitragemöglichkeiten – also Momente, in denen derselbe Token auf verschiedenen Börsen unterschiedlich bewertet wird.",
+              "Wenn es auf großen Börsen zu plötzlichen Kursbewegungen kommt – ausgelöst durch Wale, Nachrichten oder Market Maker – reagieren kleinere, weniger liquide Börsen oft verzögert.",
+              "Wir erkennen dieses Zeitfenster, kaufen den Token dort, wo er günstiger ist, übertragen ihn auf die Börse mit dem höheren Preis und verkaufen sofort – und sichern so den Gewinn aus der Preisdifferenz.",
+            ],
+          },
+          {
+            title: "Spreads finden",
+            text: [
+              "Unser Algorithmus verfolgt Preisunterschiede desselben Tokens auf verschiedenen Börsen.",
+              "Wenn kleinere Börsen auf größere Marktbewegungen verzögert reagieren, kaufen wir günstig ein, übertragen und verkaufen zum höheren Preis – und nutzen so die Arbitragemarge.",
+            ],
+          },
+          {
+            title: "Gewinn sichern",
+            text: [
+              "Wir verdienen an Preisunterschieden desselben Tokens auf verschiedenen Börsen.",
+              "Unser Bot erkennt, wo der Token günstiger ist, kauft dort ein und verkauft sofort auf der Börse mit dem höheren Kurs.",
+            ],
+          },
         ],
         api: "Alles läuft über offizielle APIs der größten Börsen: Binance, Bybit, OKX, KuCoin, Huobi.",
       },
@@ -241,9 +260,18 @@ const resources = {
       trust: {
         title: "Vertrauen und Sicherheit",
         items: [
-          "Arbeitet nur über offizielle APIs der größten Börsen.",
-          "Partner: Binance, Bybit, OKX, KuCoin, Huobi.",
-          "Wir erhalten keinen Zugriff auf Ihr Geld – nur auf das Trading.",
+          [
+            "Sie verwalten Ihre Konten selbst",
+            "Sie erstellen und verwalten Ihre Konten bei führenden Börsen eigenständig. Niemand außer Ihnen – auch nicht der Bot – hat Zugriff auf Ihre Zugangsdaten oder Ihre Gelder. Alle Transaktionen erfolgen ausschließlich innerhalb Ihrer eigenen Konten."
+          ],
+          [
+            "Auszahlungen nur an freigegebene Adressen",
+            "Sie fügen Ihre Wallet-Adressen manuell der Whitelist auf der Börse hinzu. Das bedeutet: Auszahlungen sind nur an zuvor von Ihnen autorisierte Adressen möglich – Überweisungen an andere Adressen sind ausgeschlossen."
+          ],
+          [
+            "Der Bot arbeitet nur innerhalb Ihrer Sicherheitsgrenzen",
+            "Der Arbitrage-Bot führt ausschließlich Trades innerhalb Ihrer freigegebenen Konten und whitelisted-Adressen aus. Selbst im Falle eines Systemfehlers oder theoretischen Angriffs bleiben Ihre Gelder geschützt, da Börsen keine Transaktionen außerhalb der festgelegten Sicherheitsregeln zulassen."
+          ],
         ],
       },
       offer: {

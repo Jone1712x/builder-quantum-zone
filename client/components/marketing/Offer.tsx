@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Offer() {
   const { t } = useTranslation();
-  const texts = t("offer.items", { returnObjects: true }) as string[];
+  const texts = t("offer.items", { returnObjects: true }) as (string | string[])[];
   const items = [
     { icon: "✅", text: texts[0] },
     { icon: "🎓", text: texts[1] },
@@ -19,7 +19,11 @@ export default function Offer() {
               className="rounded-2xl bg-slate-800/40 border border-white/10 p-6"
             >
               <div className="mb-3 text-3xl">{it.icon}</div>
-              <p className="text-slate-300">{it.text}</p>
+              <div className="text-slate-300 space-y-2">
+                {Array.isArray(it.text)
+                  ? it.text.map((p, idx) => <p key={idx}>{p}</p>)
+                  : <p>{it.text}</p>}
+              </div>
             </div>
           ))}
         </div>

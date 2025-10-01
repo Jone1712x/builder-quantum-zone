@@ -20,7 +20,7 @@ export default function Trust() {
               <div className="text-2xl">{it.icon}</div>
               <div className="text-slate-300 space-y-2">
                 {it.paras.map((p: string, idx: number) => (
-                  <p key={idx}>{i === 1 && idx === 0 ? <strong>{p}</strong> : p}</p>
+                  <p key={idx}>{idx === 0 ? <strong>{p}</strong> : p}</p>
                 ))}
               </div>
             </div>
