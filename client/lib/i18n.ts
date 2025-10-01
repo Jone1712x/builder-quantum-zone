@@ -63,6 +63,7 @@ const resources = {
           "This is an example of trades — on a regular market day, there are 15–20 such trades per day; during active market phases or news events, it can be 30–45",
         summary: "Night: Automatic series of 27 trades -> +$527 net profit.",
         speed: "All trades execute within seconds.",
+        highlight: "🔥 Overnight performance: 27 trades completed → $527 profit earned",
       },
       benefits: {
         title: "Why it works",
@@ -247,6 +248,7 @@ const resources = {
           "Dies ist ein Beispiel für Trades — an einem normalen Markttag gibt es 15–20 solcher Trades pro Tag; in aktiven Marktphasen oder bei Nachrichtenereignissen können es 30–45 sein.",
         summary: "Nacht: Automatische Serie von 27 Trades -> +$527 Nettogewinn.",
         speed: "Alle Trades werden in Sekunden ausgeführt.",
+        highlight: "🔥 Über Nacht: 27 abgeschlossene Trades → $527 Gewinn",
       },
       benefits: {
         title: "Warum es funktioniert",

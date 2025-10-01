@@ -24,6 +24,12 @@ export default function Trades() {
         <div className="mt-10">
           <TickerSlider randomize min={10} max={250} count={90} refreshMs={16000} />
         </div>
+
+        <div className="mt-8">
+          <div className="mx-auto max-w-3xl rounded-xl border border-yellow-400/30 bg-yellow-500/10 text-yellow-200 px-5 py-4 text-xl font-semibold shadow-[inset_0_0_0_1px_rgba(234,179,8,0.1)]">
+            {t("trades.highlight")}
+          </div>
+        </div>
       </div>
     </section>
   );
