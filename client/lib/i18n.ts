@@ -28,9 +28,28 @@ const resources = {
       steps: {
         title: "How it works",
         items: [
-          { title: "Price analysis", text: "The bot analyzes prices on dozens of exchanges in real time." },
-          { title: "Finding spreads", text: "Buys cheaper, sells higher when a difference is found." },
-          { title: "Profit capture", text: "Locks in profit and returns the result to your account." },
+          {
+            title: "Price analysis",
+            text: [
+              "Our bot analyzes the market in real time and identifies arbitrage opportunities — moments when the same token is priced differently across multiple exchanges.",
+              "When large exchanges experience sudden price movements — driven by whales, news, or market makers — smaller, less liquid exchanges often lag behind.",
+              "We detect this delay, buy the token where it’s cheaper, transfer it to the exchange where the price is higher, and sell instantly — capturing profit from the price gap.",
+            ],
+          },
+          {
+            title: "Finding spreads",
+            text: [
+              "Our algorithm tracks price differences for the same token across different exchanges.",
+              "When smaller exchanges lag behind major price movements, we buy low, transfer, and sell high — profiting from the arbitrage gap.",
+            ],
+          },
+          {
+            title: "Profit capture",
+            text: [
+              "We profit from price differences for the same token across exchanges.",
+              "Our bot spots where the price is lower, buys, and sells instantly on the exchange where it’s higher.",
+            ],
+          },
         ],
         api: "Everything goes through official APIs of the largest exchanges: Binance, Bybit, OKX, KuCoin, Huobi.",
       },
@@ -57,9 +76,16 @@ const resources = {
       trust: {
         title: "Trust and security",
         items: [
-          "Works only via official APIs of major exchanges.",
-          "Partners: Binance, Bybit, OKX, KuCoin, Huobi.",
-          "We don’t take access to your funds — only to trading.",
+          [
+            "You create and manage accounts on top-tier exchanges yourself. No one else — not even the bot — has access to your login credentials or funds. All operations happen strictly within your own accounts."
+          ],
+          [
+            "Withdrawals are restricted to your whitelisted addresses",
+            "You manually whitelist wallet addresses on each exchange. This means funds can only be withdrawn to the addresses you’ve personally approved — making unauthorized transfers impossible."
+          ],
+          [
+            "The arbitrage bot only trades within your predefined accounts and whitelisted addresses. Even in the event of a system failure or theoretical hack, your funds remain secure, as exchanges block any operations outside the limits you’ve set."
+          ],
         ],
       },
       offer: {
