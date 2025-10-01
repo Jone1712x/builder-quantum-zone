@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Steps() {
   const { t } = useTranslation();
-  const texts = t("steps.items", { returnObjects: true }) as { title: string; text: string }[];
+  const texts = t("steps.items", { returnObjects: true }) as { title: string; text: string | string[] }[];
   const items = [
     { icon: "🔍", ...texts[0] },
     { icon: "⚡", ...texts[1] },
@@ -23,7 +23,11 @@ export default function Steps() {
                 <span>{it.icon}</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">{it.title}</h3>
-              <p className="text-slate-300">{it.text}</p>
+              <div className="text-slate-300 space-y-2">
+                {Array.isArray(it.text)
+                  ? it.text.map((p, i) => <p key={i}>{p}</p>)
+                  : <p>{it.text}</p>}
+              </div>
             </div>
           ))}
         </div>
