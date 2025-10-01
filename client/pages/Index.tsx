@@ -1,7 +1,6 @@
 import Hero from "@/components/marketing/Hero";
 import Steps from "@/components/marketing/Steps";
 import Trades from "@/components/marketing/Trades";
-import Benefits from "@/components/marketing/Benefits";
 import Trust from "@/components/marketing/Trust";
 import Offer from "@/components/marketing/Offer";
 import About from "@/components/marketing/About";
@@ -48,7 +47,6 @@ export default function Index() {
         <Hero />
         <Steps />
         <Trades />
-        <Benefits />
         <Trust />
         <Offer />
         <About />
