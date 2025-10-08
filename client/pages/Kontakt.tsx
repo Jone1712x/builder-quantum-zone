@@ -9,7 +9,7 @@ export default function Kontakt() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const onSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     const form = e.currentTarget;
     if (!form.checkValidity()) {
@@ -17,8 +17,25 @@ export default function Kontakt() {
       return;
     }
     setStatus("loading");
+    const formData = new FormData(form);
+    const name = String(formData.get("name") || "");
+    const email = String(formData.get("email") || "");
+    const telegram = String(formData.get("telegram") || "");
+    const message = String(formData.get("msg") || "");
+
+    const subject = encodeURIComponent(`Contact form: ${name || "Anonymous"}`);
+    const body = encodeURIComponent(
+      `New contact form submission:\n\n` +
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Telegram: ${telegram}\n` +
+      `Message:\n${message}\n`
+    );
+
+    const mailto = `mailto:arbitrage_bot@outlook.com?subject=${subject}&body=${body}`;
+
     try {
-      await new Promise((r) => setTimeout(r, 600));
+      window.location.href = mailto;
       setStatus("success");
       form.reset();
     } catch {
