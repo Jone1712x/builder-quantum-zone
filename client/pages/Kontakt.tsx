@@ -53,10 +53,10 @@ export default function Kontakt() {
       <section id="quick" className="pb-12">
         <div className="container px-6 mx-auto max-w-5xl grid gap-6 md:grid-cols-3">
           <a
-            href="https://t.me/<username>"
+            href="https://t.me/arbitrage_bot_german"
             target="_blank"
             rel="noopener noreferrer"
-            className="group rounded-2xl border border-white/10 bg-slate-900/40 p-6 hover:border-blue-500/50 transition-colors"
+            className="group cursor-pointer rounded-2xl border border-white/10 bg-slate-900/40 p-6 hover:border-blue-500/50 transition-colors"
           >
             <div className="flex items-center gap-3">
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white">
@@ -70,10 +70,10 @@ export default function Kontakt() {
           </a>
 
           <a
-            href="https://wa.me/<nummer>?text=Hallo!%20Ich%20m%C3%B6chte%20CryptoArb%20Bot%20anschlie%C3%9Fen"
+            href="https://wa.me/628133664682"
             target="_blank"
             rel="noopener noreferrer"
-            className="group rounded-2xl border border-white/10 bg-slate-900/40 p-6 hover:border-emerald-500/50 transition-colors"
+            className="group cursor-pointer rounded-2xl border border-white/10 bg-slate-900/40 p-6 hover:border-emerald-500/50 transition-colors"
           >
             <div className="flex items-center gap-3">
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500 text-white">
@@ -87,8 +87,8 @@ export default function Kontakt() {
           </a>
 
           <a
-            href="mailto:team@domain.de?subject=CryptoArb%20Bot"
-            className="group rounded-2xl border border-white/10 bg-slate-900/40 p-6 hover:border-indigo-500/50 transition-colors"
+            href="mailto:arbitrage_bot@outlook.com"
+            className="group cursor-pointer rounded-2xl border border-white/10 bg-slate-900/40 p-6 hover:border-indigo-500/50 transition-colors"
           >
             <div className="flex items-center gap-3">
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-500 text-white">
