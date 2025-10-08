@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Kontakt() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -26,10 +28,10 @@ export default function Kontakt() {
     const subject = encodeURIComponent(`Contact form: ${name || "Anonymous"}`);
     const body = encodeURIComponent(
       `New contact form submission:\n\n` +
-      `Name: ${name}\n` +
-      `Email: ${email}\n` +
-      `Telegram: ${telegram}\n` +
-      `Message:\n${message}\n`
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Telegram: ${telegram}\n` +
+        `Message:\n${message}\n`,
     );
 
     const mailto = `mailto:arbitrage_bot@outlook.com?subject=${subject}&body=${body}`;
@@ -61,8 +63,12 @@ export default function Kontakt() {
 
       <section className="py-6 md:py-8">
         <div className="container px-6 mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">{t("kontakt.title")}</h1>
-          <p className="mt-4 text-slate-300 text-lg md:text-xl">{t("kontakt.subtitle")}</p>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+            {t("kontakt.title")}
+          </h1>
+          <p className="mt-4 text-slate-300 text-lg md:text-xl">
+            {t("kontakt.subtitle")}
+          </p>
         </div>
       </section>
 
@@ -80,8 +86,12 @@ export default function Kontakt() {
                 <Send className="h-5 w-5" />
               </span>
               <div>
-                <div className="text-xl font-semibold">{t("kontakt.telegram")}</div>
-                <div className="text-sm text-slate-400">{t("kontakt.reply5min")}</div>
+                <div className="text-xl font-semibold">
+                  {t("kontakt.telegram")}
+                </div>
+                <div className="text-sm text-slate-400">
+                  {t("kontakt.reply5min")}
+                </div>
               </div>
             </div>
           </a>
@@ -97,8 +107,12 @@ export default function Kontakt() {
                 <MessageCircle className="h-5 w-5" />
               </span>
               <div>
-                <div className="text-xl font-semibold">{t("kontakt.whatsapp")}</div>
-                <div className="text-sm text-slate-400">{t("kontakt.reply5min")}</div>
+                <div className="text-xl font-semibold">
+                  {t("kontakt.whatsapp")}
+                </div>
+                <div className="text-sm text-slate-400">
+                  {t("kontakt.reply5min")}
+                </div>
               </div>
             </div>
           </a>
@@ -112,8 +126,12 @@ export default function Kontakt() {
                 <Mail className="h-5 w-5" />
               </span>
               <div>
-                <div className="text-xl font-semibold">{t("kontakt.email")}</div>
-                <div className="text-sm text-slate-400">{t("kontakt.replyDay")}</div>
+                <div className="text-xl font-semibold">
+                  {t("kontakt.email")}
+                </div>
+                <div className="text-sm text-slate-400">
+                  {t("kontakt.replyDay")}
+                </div>
               </div>
             </div>
           </a>
@@ -123,11 +141,16 @@ export default function Kontakt() {
       {/* Contact form */}
       <section className="py-12">
         <div className="container px-6 mx-auto max-w-3xl">
-          <h2 className="text-2xl md:text-3xl font-bold">{t("kontakt.formTitle")}</h2>
+          <h2 className="text-2xl md:text-3xl font-bold">
+            {t("kontakt.formTitle")}
+          </h2>
           <form className="mt-6 space-y-4" onSubmit={onSubmit} noValidate>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="name" className="block text-sm text-slate-300 mb-1">
+                <label
+                  htmlFor="name"
+                  className="block text-sm text-slate-300 mb-1"
+                >
                   {t("kontakt.name")}
                 </label>
                 <input
@@ -139,7 +162,10 @@ export default function Kontakt() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm text-slate-300 mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm text-slate-300 mb-1"
+                >
                   {t("kontakt.emailLabel")}
                 </label>
                 <input
@@ -153,7 +179,10 @@ export default function Kontakt() {
               </div>
             </div>
             <div>
-              <label htmlFor="telegram" className="block text-sm text-slate-300 mb-1">
+              <label
+                htmlFor="telegram"
+                className="block text-sm text-slate-300 mb-1"
+              >
                 {t("kontakt.telegramLabel")}
               </label>
               <input
@@ -164,7 +193,10 @@ export default function Kontakt() {
               />
             </div>
             <div>
-              <label htmlFor="msg" className="block text-sm text-slate-300 mb-1">
+              <label
+                htmlFor="msg"
+                className="block text-sm text-slate-300 mb-1"
+              >
                 {t("kontakt.message")}
               </label>
               <textarea
@@ -199,8 +231,12 @@ export default function Kontakt() {
           <div>{t("kontakt.hours")}</div>
           <div className="mt-1">{t("kontakt.languages")}</div>
           <div className="mt-3 flex gap-4">
-            <span className="underline cursor-default select-text">{t("kontakt.imprint")}</span>
-            <span className="underline cursor-default select-text">{t("kontakt.privacyLink")}</span>
+            <span className="underline cursor-default select-text">
+              {t("kontakt.imprint")}
+            </span>
+            <span className="underline cursor-default select-text">
+              {t("kontakt.privacyLink")}
+            </span>
           </div>
         </div>
       </section>
@@ -208,10 +244,16 @@ export default function Kontakt() {
       {/* Sticky bar for mobile */}
       <div className="fixed inset-x-0 bottom-0 z-40 md:hidden p-3 bg-gradient-to-t from-[#0A0F1F] via-[#0A0F1F]/95 to-transparent">
         <div className="container px-3 mx-auto max-w-3xl grid grid-cols-2 gap-3">
-          <a href="#quick" className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white shadow hover:bg-blue-500">
+          <a
+            href="#quick"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white shadow hover:bg-blue-500"
+          >
             <Send className="h-5 w-5" /> {t("kontakt.telegramShort")}
           </a>
-          <a href="#quick" className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-4 py-3 font-semibold text-white shadow hover:bg-emerald-400">
+          <a
+            href="#quick"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-4 py-3 font-semibold text-white shadow hover:bg-emerald-400"
+          >
             <MessageCircle className="h-5 w-5" /> {t("kontakt.whatsappShort")}
           </a>
         </div>
